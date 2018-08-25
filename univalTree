@@ -1,0 +1,65 @@
+/* Given a tree of integers and return the number of non-empty unival trees
+A unival tree is a tree which contain all nodes with the same number.
+*/
+
+class Node {
+    int value
+    Node left
+    Node right
+}
+
+// DUMB SOLUTION
+
+// O(n)
+def isUnival(root):
+    if root == null:
+        return true
+    if root.left != null and root.left.value != root.value  
+        return false
+    if root.right != null and root.right.value != root.value  
+        return false
+    if isUnival(root.left) and isUnival(root.right):
+        return true
+    return false
+
+// O(n^2)
+def countUnivals(root):
+    if root == null:
+        return 0
+
+    count = countUnivals(root.left) + countUnivals(root.right)
+    
+    if isUnival(root):
+        count++
+    return count
+    
+
+
+// GOOD SOLUTION O(n)
+def countUnivals(root):
+    count, is_unival = explore(root)
+    return count
+
+def explore(root):
+    if root == null: return (0, true)
+    left_count, is_left_unival = explore(root.left)
+    right_count, is_right_unival = explore(root.right)
+    
+    is_unival = true
+    if not is_left_unival or not is_right unival:
+        is_unival = false
+
+    if root.left != null and root.left.value != root.value:
+        is_unival = false
+
+    if root.right != null and root.right.value != root.value:
+        is_unival = false
+
+    if is_unival:
+        return (left_count + right_count +1, true)
+    else:
+        return (left_count + right_count, false)
+
+
+
+// Asked by Google
