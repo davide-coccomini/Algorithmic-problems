@@ -11,17 +11,17 @@
 
 
 def printSubset(given_array):
-    subset = int[given_array.length]
+    subset = int[len(given_array)]
     explore(given_array, subset, 0)
 
 
 def explore(given_array, subset, i):
-    if i == given_array.length:
+    if i == len(given_array):
         print(subset)
     else:
         # First exploration, without a number
         subset[i] = null
-        explore(given_array. subset, i+1)
+        explore(given_array, subset, i+1)
         #  Second exploration, with the sequel number
         subset[i] = given_array[i]
         explore(given_array, subset, i+1)
