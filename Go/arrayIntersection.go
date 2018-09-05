@@ -35,14 +35,3 @@ func arrayIntersection(arr1 []int, arr2 []int, arr3 []int) []int {
 	return result
 
 }
-
-/*
-// Test call
-func main(){
-	arr1 := int[]{2,8,9,10,15}
-	arr2 := int[]{2,9,11,17,15}
-	arr3 := int[]{2,3,9,17,15}
-	result := arrayIntersection(arr1,arr2,arr3)
-	print(str(result))
-}
-*/

@@ -31,9 +31,4 @@ func explore(givenArray []int, subset []int, i int) {
 	}
 }
 
-func main() {
-	givenArray := []int{1, 2}
-	printSubset(givenArray)
-}
-
 // Asked by Facebook

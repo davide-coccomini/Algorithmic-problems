@@ -31,12 +31,3 @@ func longestSubsequence(givenArray []int) int {
 	}
 	return length
 }
-
-// Test call
-/*
-func main(){
-	arr = [1,2,3,5,4,8,9]
-	result = longestSubsequence(arr)
-	print(string(result))
-}
-*/
